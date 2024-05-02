@@ -2,14 +2,17 @@ namespace roman_numeral_kata;
 
 public class Tests
 {
-    [SetUp]
-    public void Setup()
+    [Test]
+    public void RomanNumberOfOneIsI()
     {
+        Assert.That(Roman.FromInt(1), Is.EqualTo("I"));
     }
 
+    // 5 is v
+
     [Test]
-    public void Test1()
+    public void RomanNumberofFiveIsV()
     {
-        Assert.Pass();
+        Assert.That(Roman.FromInt(5), Is.EqualTo("V"));
     }
 }
